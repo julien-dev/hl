@@ -1,0 +1,34 @@
+.img-containner img{
+    width:100%;
+    display:block;
+}
+.img-containner{
+  position: relative;
+}
+
+.video-containner{
+ position: relative;
+ background: url("../img/androidVideoBg.png");
+ background-size: 100%;
+
+}
+.wrapper {
+    padding: 4% 4%;
+}
+.videocontent {
+    width: 80%;
+    max-width: 960px;
+    margin: 0 auto;
+    height:100%;
+}
+
+.video-js {
+    padding-top: 55.25%;
+}
+
+.vjs-fullscreen {
+    padding-top: 0px;
+}
+.ui-content {
+ padding: 0 5px 0 5px;
+}
