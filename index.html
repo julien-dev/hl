@@ -25,7 +25,7 @@
             <div class="video-containner">
                 <div class="wrapper">
                     <div class="videocontent">
-                        <video id="really-cool-video" class="video-js vjs-default-skin" controls
+                        <video id="really-cool-video" class="video-js vjs-default-skin vjs-big-play-centered" controls
                                preload="auto" width="auto" height="auto"
                                data-setup='{}'>
                             <!-- <source src="http://vjs.zencdn.net/v/oceans.mp4" type='video/mp4'>-->
@@ -47,6 +47,7 @@
         $(document).ready(function() {
             var player = videojs('really-cool-video', { /* Options */ }, function() {
                 var self = this ;
+                self.postImage
                 $("video").click(function(){
                     self.play(); // if you don't trust autoplay for some reason
                 });
