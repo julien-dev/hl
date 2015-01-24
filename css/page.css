@@ -10,7 +10,6 @@
  position: relative;
  background: url("../img/androidVideoBg.png");
  background-size: 100%;
-
 }
 .wrapper {
     padding: 4% 4%;
@@ -31,4 +30,12 @@
 }
 .ui-content {
  padding: 0 5px 0 5px;
+}
+#dktj-body{
+    background: url("../img/dktj/androidBgBody.png");
+    background-size: 100%;
+}
+#shzs-body{
+    background: url("../img/shzs/androidBgBody.png");
+    background-size: 100%;
 }
