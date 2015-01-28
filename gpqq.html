@@ -20,16 +20,16 @@
     <div data-role="page" id="nav" >
         <div role="main" class="ui-content">
             <div class="img-containner">
-                <img src="img/shzs/androidBgHeader.png"/>
+                <img src="img/gpqq/a.png"/>
             </div>
-            <div class="video-containner" id="shzs-body">
+            <div class="video-containner" id="gpqq-a-body">
                 <div class="wrapper">
                     <div class="videocontent">
                         <video id="really-cool-video" class="video-js vjs-default-skin vjs-big-play-centered" controls
                                preload="auto" width="auto" height="auto"
                                data-setup='{}'>
                             <!-- <source src="http://vjs.zencdn.net/v/oceans.mp4" type='video/mp4'>-->
-                            <source src="video/dshzs.mp4" type='video/mp4'>
+                            <source src="video/gpqqa.mp4" type='video/mp4'>
                             <p class="vjs-no-js">
                                 To view this video please enable JavaScript, and consider upgrading to a web browser
                                 that <a href="http://videojs.com/html5-video-support/" target="_blank">supports HTML5 video</a>
@@ -39,7 +39,26 @@
                 </div>
             </div>
             <div  class="img-containner">
-                <img src="img/shzs/androidBgFooter.png"/>
+                <img src="img/gpqq/c.png"/>
+            </div>
+            <div class="video-containner" id="gpqq-b-body">
+                <div class="wrapper">
+                    <div class="videocontent">
+                        <video id="really-cool-video-b" class="video-js vjs-default-skin vjs-big-play-centered" controls
+                               preload="auto" width="auto" height="auto"
+                               data-setup='{}'>
+                            <!-- <source src="http://vjs.zencdn.net/v/oceans.mp4" type='video/mp4'>-->
+                            <source src="video/gpqqb.mp4" type='video/mp4'>
+                            <p class="vjs-no-js">
+                                To view this video please enable JavaScript, and consider upgrading to a web browser
+                                that <a href="http://videojs.com/html5-video-support/" target="_blank">supports HTML5 video</a>
+                            </p>
+                        </video>
+                    </div>
+                </div>
+            </div>
+            <div  class="img-containner">
+                <img src="img/gpqq/e.png"/>
             </div>
         </div>
     </div>
@@ -47,10 +66,19 @@
         $(document).ready(function() {
             var player = videojs('really-cool-video', { /* Options */ }, function() {
                 var self = this ;
-                $("video").click(function(){
+                $("#really-cool-video video").click(function(){
                     self.play(); // if you don't trust autoplay for some reason
                 });
-            });});
+            });
+            var player = videojs('really-cool-video-b', { /* Options */ }, function() {
+                var self = this ;
+                $("#really-cool-video-b video").click(function(){
+                    self.play(); // if you don't trust autoplay for some reason
+                });
+            });
+
+        });
+
 
     </script>
 </body>
