@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>小微企业贷款之贷款条件</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="js/jqueryMobile/jquery.mobile-1.4.5.min.css">
+    <link href="js/video.js/video-js.css" rel="stylesheet">
+    <link href="css/page.css" rel="stylesheet">
+    <script src="js/jquery-1.11.1.js"></script>
+    <script src="js/modernizr-2.5.3.min.js"></script>
+    <script src="js/jqueryMobile/jquery.mobile-1.4.5.min.js"></script>
+    <script src="js/video.js/video.js"></script>
+    <!-- Unless using the CDN hosted version, update the URL to the Flash SWF -->
+    <script>
+        videojs.options.flash.swf = "video-js.swf";
+    </script>
+</head>
+<body>
+<div data-role="page" id="nav" >
+    <div role="main" class="ui-content">
+        <div class="img-containner">
+            <img src="img/ldhh/androidBgHeader.png"/>
+        </div>
+        <div class="video-containner" id="ldhh-body">
+            <div class="wrapper">
+                <div class="videocontent">
+                    <video id="really-cool-video" class="video-js vjs-default-skin vjs-big-play-centered" controls
+                           preload="auto" width="auto" height="auto"
+                           data-setup='{}'>
+                        <!-- <source src="http://vjs.zencdn.net/v/oceans.mp4" type='video/mp4'>-->
+                        <source src="video/ldhh.mp4" type='video/mp4'>
+                        <p class="vjs-no-js">
+                            To view this video please enable JavaScript, and consider upgrading to a web browser
+                            that <a href="http://videojs.com/html5-video-support/" target="_blank">supports HTML5 video</a>
+                        </p>
+                    </video>
+                </div>
+            </div>
+        </div>
+        <div  class="img-containner">
+            <img src="img/ldhh/androidBgFooter.png"/>
+        </div>
+    </div>
+</div>
+<script>
+    $(document).ready(function() {
+        var player = videojs('really-cool-video', { /* Options */ }, function() {
+            var self = this ;
+            $("video").click(function(){
+                self.play(); // if you don't trust autoplay for some reason
+            });
+        });});
+
+</script>
+</body>
+</html>
+
