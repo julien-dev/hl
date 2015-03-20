@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>游戏改变学习</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="js/jqueryMobile/jquery.mobile-1.4.5.min.css">
+    <link href="js/video.js/video-js.css" rel="stylesheet">
+    <link href="css/page.css" rel="stylesheet">
+    <script src="js/jquery-1.11.1.js"></script>
+    <script src="js/modernizr-2.5.3.min.js"></script>
+    <script src="js/jqueryMobile/jquery.mobile-1.4.5.min.js"></script>
+    <script src="js/video.js/video.js"></script>
+    <!-- Unless using the CDN hosted version, update the URL to the Flash SWF -->
+    <script>
+        videojs.options.flash.swf = "video-js.swf";
+    </script>
+</head>
+<body>
+    <div data-role="page" id="nav" >
+        <div role="main" class="ui-content">
+            <div class="img-containner">
+                <img src="img/yxhxx/a.png"/>
+            </div>
+            <div class="video-containner" id="yxhxx-a-body">
+                <div class="wrapper">
+                    <div class="videocontent">
+                        <video id="really-cool-video" class="video-js vjs-default-skin vjs-big-play-centered" controls
+                               preload="auto" width="auto" height="auto"
+                               data-setup='{}'>
+                            <!-- <source src="http://vjs.zencdn.net/v/oceans.mp4" type='video/mp4'>-->
+                            <source src="video/yxhxx1.mp4" type='video/mp4'>
+                            <p class="vjs-no-js">
+                                To view this video please enable JavaScript, and consider upgrading to a web browser
+                                that <a href="http://videojs.com/html5-video-support/" target="_blank">supports HTML5 video</a>
+                            </p>
+                        </video>
+                    </div>
+                </div>
+            </div>
+            <div class="img-containner">
+                <img src="img/yxhxx/c.png"/>
+            </div>
+            <div class="content-containner">
+                <div class="item-containner">
+                    <div class="img-containner toggle-btn" >
+                        <img src="img/yxhxx/btn-1.png"/>
+                    </div>
+                    <div class="img-containner toggle-content">
+                        <img src="img/yxhxx/tip-1.png"/>
+                    </div>
+                </div>
+                <div class="item-containner">
+                    <div class="img-containner toggle-btn" >
+                        <img src="img/yxhxx/btn-2.png"/>
+                    </div>
+                    <div class="img-containner toggle-content">
+                        <img src="img/yxhxx/tip-2.png"/>
+                    </div>
+                </div>
+                <div class="item-containner">
+                    <div class="img-containner toggle-btn" >
+                        <img src="img/yxhxx/btn-3.png"/>
+                    </div>
+                    <div class="img-containner toggle-content">
+                        <img src="img/yxhxx/tip-3.png"/>
+                    </div>
+                </div>
+                <div class="item-containner">
+                    <div class="img-containner toggle-btn" >
+                        <img src="img/yxhxx/btn-4.png"/>
+                    </div>
+                    <div class="img-containner toggle-content">
+                        <img src="img/yxhxx/tip-4.png"/>
+                    </div>
+                </div>
+            </div>
+            <div class="img-containner">
+                <img src="img/yxhxx/d.png"/>
+            </div>
+            <div class="video-containner" id="yxhxx-b-body">
+                <div class="wrapper">
+                    <div class="videocontent">
+                        <video id="really-cool-video-b" class="video-js vjs-default-skin vjs-big-play-centered" controls
+                               preload="auto" width="auto" height="auto"
+                               data-setup='{}'>
+                            <!-- <source src="http://vjs.zencdn.net/v/oceans.mp4" type='video/mp4'>-->
+                            <source src="video/yxhxx2.mp4" type='video/mp4'>
+                            <p class="vjs-no-js">
+                                To view this video please enable JavaScript, and consider upgrading to a web browser
+                                that <a href="http://videojs.com/html5-video-support/" target="_blank">supports HTML5 video</a>
+                            </p>
+                        </video>
+                    </div>
+                </div>
+            </div>
+            <div class="img-containner">
+                <img src="img/yxhxx/f.png"/>
+            </div>
+        </div>
+ </div>
+    <script>
+        $(document).ready(function() {
+            var player = videojs('really-cool-video', { /* Options */ }, function() {
+                var self = this ;
+                $("#really-cool-video video").click(function(){
+                    self.play(); // if you don't trust autoplay for some reason
+                });
+            });
+            var player2 = videojs('really-cool-video-b', { /* Options */ }, function() {
+                var self = this ;
+                $("#really-cool-video-b video").click(function(){
+                    self.play(); // if you don't trust autoplay for some reason
+                });
+            });
+            var toggleContent = $(".toggle-content");
+            toggleContent.slideUp();
+            var toggleBtn = $(".toggle-btn");
+            var len = toggleBtn.length;
+            for(var i=0;i<len;i++ ){
+                    $(toggleBtn[i]).data({index:i,flag:false}).click(function(){
+                    var flag = $(this).data('flag');
+                    var index = $(this).data('index');
+                    var curToggleContent = $(toggleContent[index]);
+                        flag?curToggleContent.slideUp():curToggleContent.slideDown('slow',function(){
+                           //curToggleContent.position().top - $(document).scrollTop() ;
+                            var hei = curToggleContent.height()/2 ;
+                            var h = curToggleContent.position().top+1.5 - $(document).scrollTop()/2
+                            $('html,body').animate({scrollTop:h}, 300);
+                        });
+                    $(this).data('flag',!flag) ;
+                });
+            }
+
+
+        });
+    </script>
+</body>
+</html>
+

@@ -5,7 +5,16 @@
 .img-containner{
   position: relative;
 }
-
+.content-containner{
+    background-color: rgb(68,90,110);
+    margin: 0 1% 0 1%;
+}
+.item-containner:first-of-type{
+    margin-top: 0;
+}
+.item-containner{
+    margin-top: 4%;
+}
 .video-containner{
  position: relative;
  background: url("../img/androidVideoBg.png");
@@ -58,5 +67,13 @@
 }
 #rzrq-b-body{
     background: url("../img/rzrq/d.png");
+    background-size: 100%;
+}
+#yxhxx-a-body{
+    background: url("../img/yxhxx/b.png");
+    background-size: 100%;
+}
+#yxhxx-b-body{
+    background: url("../img/yxhxx/e.png");
     background-size: 100%;
 }
