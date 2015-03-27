@@ -124,9 +124,9 @@
                     var curToggleContent = $(toggleContent[index]);
                         flag?curToggleContent.slideUp():curToggleContent.slideDown('slow',function(){
                            //curToggleContent.position().top - $(document).scrollTop() ;
-                            var hei = curToggleContent.height()/2 ;
-                            var h = curToggleContent.position().top+1.5 - $(document).scrollTop()/2
-                            $('html,body').animate({scrollTop:h}, 300);
+                           // var hei = curToggleContent.height()/2 ;
+                           // var h = curToggleContent.position().top+1.5 - $(document).scrollTop()/2
+                           // $('html,body').animate({scrollTop:h}, 300);
                         });
                     $(this).data('flag',!flag) ;
                 });
